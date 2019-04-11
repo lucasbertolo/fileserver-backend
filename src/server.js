@@ -38,4 +38,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'temp'))); //pega
 
 app.use(require('./routes')); //pega as rotas 
 
-server.listen(3000); //ouve tanto websockets quanto http
+server.listen(process.env.PORT || 3000); //ouve tanto websockets quanto http
